@@ -19,3 +19,4 @@
 
 ## Additional installations
 - Jetbrains Mono Nerd Font (for nvim)
+- tmux tpm (package manager for tmux)
