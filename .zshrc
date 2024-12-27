@@ -103,8 +103,6 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 alias gs="git status"
 alias gau="git add -u"
 alias gaa="git add -A"
-gcm () {
-    git commit -m "$1"
-}
+alias gcm="git commit -m"
 alias gp="git push"
 alias glo="git log --oneline"
