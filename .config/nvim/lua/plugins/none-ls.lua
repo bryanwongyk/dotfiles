@@ -1,5 +1,6 @@
 return {
-	"nvimtools/none-ls.nvim",
+	-- none-ls - used to set up LSPs
+  "nvimtools/none-ls.nvim",
   dependencies = {
     "nvimtools/none-ls-extras.nvim",
   },

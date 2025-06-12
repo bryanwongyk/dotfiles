@@ -1,4 +1,5 @@
 return {
+  -- completion for LSPs
   {
     "hrsh7th/cmp-nvim-lsp"
   },

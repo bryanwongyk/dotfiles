@@ -104,5 +104,17 @@ alias gs="git status"
 alias gau="git add -u"
 alias gaa="git add -A"
 alias gcm="git commit -m"
+alias gcma="git commit -m --amend --no-edit" 
 alias gp="git push"
+alias gpf="git push --force"
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
 alias glo="git log --oneline"
+
+# pnpm
+export PNPM_HOME="/Users/bryanwong/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

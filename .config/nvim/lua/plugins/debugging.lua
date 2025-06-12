@@ -1,5 +1,6 @@
 -- incomplete setup - TODO: setup specific debuggers when required
 return {
+  -- nvim-dap - enable running code in debug mode
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		"nvim-neotest/nvim-nio",

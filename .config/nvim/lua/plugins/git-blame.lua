@@ -1,4 +1,5 @@
 return {
+  -- git-blame - adds git blame on code line
   "f-person/git-blame.nvim",
   -- load the plugin at startup
   event = "VeryLazy",

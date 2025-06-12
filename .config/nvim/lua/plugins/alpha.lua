@@ -1,4 +1,5 @@
 return {
+  -- alpha-nvim - startup logo
   "goolord/alpha-nvim",
   dependencies = {
     "nvim-tree/nvim-web-devicons",

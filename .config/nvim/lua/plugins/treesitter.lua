@@ -1,4 +1,5 @@
 return {
+  -- treesitter - enables highlighting and linting of code
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
