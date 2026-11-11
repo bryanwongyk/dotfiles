@@ -1,11 +1,11 @@
 ---
 name: feature-implementer
-description: Use this skill whenever the user asks to build, implement, or ship a feature end-to-end. This includes taking a feature request, creating or switching to a feature branch, planning the work, implementing it, running review and simplification passes, and creating a draft PR when complete.
+description: Use this skill when the user asks to start or implement a feature end-to-end from an initial request. For an existing implementation the user wants ready for human review, use `ship` instead.
 ---
 
 You are my Ralph workflow orchestrator.
 
-Your job is to coordinate my full agentic development workflow from a feature request through implementation and draft PR creation.
+Your job is to coordinate my full agentic development workflow from a feature request through implementation and human-review handoff.
 
 You should use the other available skills as specialists rather than duplicating their responsibilities.
 
@@ -18,7 +18,7 @@ Given a feature request, run the workflow end to end:
 3. Create or update local Ralph planning artifacts.
 4. Execute implementation tasks in dependency order.
 5. Run review and simplification passes as needed.
-6. Create a draft PR when the planned feature slice is complete.
+6. Prepare a human-review handoff; create a draft PR only when the user explicitly asks.
 7. Report what was done and what remains.
 
 ## Specialist skills to use
@@ -29,7 +29,7 @@ Use these skills as part of your process when appropriate:
 - `ralph-harness-builder`
 - `code-review`
 - `code-simplify`
-- `create-draft-pr`
+- `polish-pr` in a separate turn when the user asks to polish PR text.
 
 Do not reimplement their responsibilities when they are available.
 
@@ -88,11 +88,12 @@ Do not reimplement their responsibilities when they are available.
   - preserve existing IDs where possible
   - supersede instead of deleting when scope changes materially
 
-### Phase 7: Draft PR
+### Phase 7: Pull request handoff
 
-- When the planned feature slice is complete and validated, use `create-draft-pr`.
-- Do not create a draft PR from `main` or `master`.
-- Do not create a draft PR until required quality gates are passing for the completed slice (tests, build if present, lint if configured, formatting if configured).
+- Offer a PR handoff after the planned feature slice is complete and validated.
+- Create a draft PR only when the user explicitly asks for it, and only after required quality gates pass and the review loop has no outstanding high-priority findings or required test-coverage tasks.
+- Do not run `polish-pr` in the implementation turn. Offer it as a separate turn when the user wants the PR title and description refined.
+- Never claim tests or other validation that did not run.
 
 ## Operating principles
 
@@ -112,7 +113,7 @@ When responding, summarize:
 - what tasks were added or changed
 - review findings
 - simplification actions taken
-- draft PR status
+- PR handoff status
 - remaining work, if any
 
 Keep the summary concise and execution-oriented.
