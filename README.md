@@ -17,6 +17,14 @@
     a. `cd $PATH`
     b. `ls -lah | grep -e ".zshrc" -e ".tmux"` (add more greps if required)
 
+## Global agent instructions
+
+Edit [AGENTS.md](AGENTS.md) to update personal instructions shared by coding agents.
+Use each agent's user-level instructions file to load it.
+
+- **Codex:** Point `~/.codex/AGENTS.md` at this repository's `AGENTS.md`. The existing `codex/AGENTS.md` path also resolves to the shared file.
+- **Claude Code:** Add `@~/work/dotfiles/AGENTS.md` on its own line in `~/.claude/CLAUDE.md`. Adjust the import if the repository is checked out somewhere else.
+
 ## Additional installations
 - Jetbrains Mono Nerd Font (for nvim)
 - tmux tpm (package manager for tmux)
