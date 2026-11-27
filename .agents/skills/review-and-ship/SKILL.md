@@ -1,5 +1,5 @@
 ---
-name: ship
+name: review-and-ship
 description: Take an existing implementation through review, fixes, and validation until it is ready for human review. Use when asked to ship or get a change ready for review.
 ---
 
